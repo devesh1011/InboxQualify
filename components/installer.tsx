@@ -17,9 +17,8 @@ export function Installer() {
     setIsStandalone(window.matchMedia("(display-mode: standalone)").matches);
 
     // Check if iOS
-    // @ts-expect-error (window.MSStream is a property of the window object)
     const iOS =
-      /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+      /iPad|iPhone|iPod/.test(navigator.userAgent) && !(window as any).MSStream;
     setIsIOS(iOS);
 
     // Don't show if user opted out
@@ -43,8 +42,7 @@ export function Installer() {
       );
 
       // Only show prompt in Safari and not in standalone mode
-      // @ts-expect-error (navigator.standalone is a property of the navigator object)
-      if (isSafari && !navigator.standalone) {
+      if (isSafari && !(navigator as any).standalone) {
         // Delay showing the prompt to avoid immediate dismissal
         const timer = setTimeout(() => setShowBanner(true), 1000);
         return () => clearTimeout(timer);
@@ -59,10 +57,8 @@ export function Installer() {
         'To install: tap the share icon in your browser and select "Add to Home Screen"'
       );
     } else if (deferredPrompt) {
-      // @ts-expect-error (deferredPrompt is a property of the window object)
-      deferredPrompt.prompt();
-      // @ts-expect-error (deferredPrompt is a property of the window object)
-      const { outcome } = await deferredPrompt.userChoice;
+      (deferredPrompt as any).prompt();
+      const { outcome } = await (deferredPrompt as any).userChoice;
 
       if (outcome === "accepted") {
         setDeferredPrompt(null);
