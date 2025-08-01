@@ -13,7 +13,17 @@ import {
 } from "lucide-react";
 
 export default function Features() {
-  const Feature = ({ title, description, icon, index }) => {
+  const Feature = ({
+    title,
+    description,
+    icon,
+    index,
+  }: {
+    title: string;
+    description: string;
+    icon: React.ReactNode;
+    index: number;
+  }) => {
     return (
       <div
         className={cn(
