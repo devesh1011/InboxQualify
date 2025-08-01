@@ -5,15 +5,6 @@
 
 Whether you're a salesperson, marketer, or founder, InboxQualify makes optimizing your cold emails for deliverability and engagement easy — and even enjoyable.
 
-### Main Tech Stack
-
-1.  NextJS 15 (Full Stack framework with React 18)
-2.  Radix UI, Shadcn UI, Magic UI and Motion/React (Frontend)
-3.  HonoJS for Serverless APIs.
-4.  Google Firebase (Authentication, Firestore, and Cloud Storage)
-5.  Cloudflare Workers and Pages (REST APIs and App Hosting)
-6.  Paddle Billing for Subscriptions
-
 ### Upcoming Features
 
 1.  AI-powered tone analysis and scoring. (0%)
