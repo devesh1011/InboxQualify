@@ -1,19 +1,16 @@
 "use client";
 
 import { P } from "@/components/ui/typography";
-import AnimatedShinyText from "@/components/ui/animated-shiny-text";
 import GridPattern from "@/components/ui/grid-pattern";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 import { cn } from "@/lib/utils";
-import { MousePointerClickIcon, PackagePlusIcon } from "lucide-react";
+import { MousePointerClickIcon } from "lucide-react";
 import { stagger, useAnimate } from "motion/react";
 import { useEffect, useRef } from "react";
 import Link from "next/link";
-import { useTheme } from "next-themes";
 
 export default function Hero() {
   const [scope, animate] = useAnimate();
-  const { theme } = useTheme();
   const dashboardRef = useRef<HTMLDivElement>(null);
   const description = "Your Cold Email Co-pilot";
 

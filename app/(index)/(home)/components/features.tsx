@@ -4,18 +4,12 @@ import { Section } from "@/components/ui/layout";
 import { H2, P } from "@/components/ui/typography";
 import { cn } from "@/lib/utils";
 import {
-  CloudUploadIcon,
-  SaveAllIcon,
-  ChartNoAxesCombinedIcon,
-  EarthIcon,
-  ScrollTextIcon,
   BrainCircuitIcon,
   CheckCircleIcon,
   ZapIcon,
   SmileIcon,
   BarChartIcon,
   WorkflowIcon,
-  BellIcon,
 } from "lucide-react";
 
 export default function Features() {
