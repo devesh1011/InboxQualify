@@ -13,7 +13,17 @@ import {
 } from "lucide-react"; // Icons for pain points
 
 export default function PainPoints() {
-  const PainPoint = ({ title, description, icon, index }) => {
+  const PainPoint = ({
+    title,
+    description,
+    icon,
+    index,
+  }: {
+    title: string;
+    description: string;
+    icon: React.ReactNode;
+    index: number;
+  }) => {
     return (
       <div
         className={cn(
