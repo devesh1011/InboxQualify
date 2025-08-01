@@ -10,7 +10,6 @@ import {
 import {
   Sidebar,
   SidebarContent,
-  SidebarFooter,
   SidebarGroup,
   SidebarGroupLabel,
   SidebarHeader,
@@ -21,7 +20,6 @@ import {
 } from "@/components/ui/sidebar";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { UserMenu } from "./user-menu";
 import { P } from "./ui/typography";
 import { Card, CardContent } from "./ui/card";
 
@@ -207,9 +205,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           </SidebarMenu>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter>
-        <UserMenu />
-      </SidebarFooter>
     </Sidebar>
   );
 }
