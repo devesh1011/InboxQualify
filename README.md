@@ -1,4 +1,4 @@
-<img src="/public/logo-512.png" alt="InboxQualify banner" width="100%" />
+<img src="/public/banner.png" alt="InboxQualify banner" width="100%" />
 <br />
 
 # InboxQualify - Your AI Co-pilot for Cold Email.
